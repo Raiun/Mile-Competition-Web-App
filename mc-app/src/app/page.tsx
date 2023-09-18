@@ -1,9 +1,24 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import Image from "next/image"
+import styles from "./page.module.css"
+import Countdown from "./_components/Countdown"
+import StatCard from "./_components/StatCard"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <div>
+      <div style={{display: "flex"}}>
+        <StatCard name="Person 1"></StatCard>
+        <StatCard name="Person 2"></StatCard>
+      </div>
+      <Countdown></Countdown>
+    </div>
+  )
+}
+
+
+/*<main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -25,6 +40,7 @@ export default function Home() {
               priority
             />
           </a>
+
         </div>
       </div>
 
@@ -38,7 +54,7 @@ export default function Home() {
           priority
         />
       </div>
-
+      <Countdown></Countdown>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -90,6 +106,4 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
-  )
-}
+    </main>*/

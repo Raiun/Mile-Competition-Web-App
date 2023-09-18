@@ -1,0 +1,9 @@
+#countdown {
+    margin: auto;
+    padding: 20px 100px;
+    width: clamp(30%, 40%, 80%);
+    border-radius: 10px;
+    text-align: center;
+    font-size: clamp(10px, 5vw, 30px);
+    background-color: white;
+}
