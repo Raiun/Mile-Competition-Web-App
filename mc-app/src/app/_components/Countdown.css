@@ -1,9 +1,30 @@
 #countdown {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-columns: repeat(4, minmax(60px, auto));
     margin: auto;
     padding: 20px 100px;
     width: clamp(30%, 40%, 80%);
     border-radius: 10px;
     text-align: center;
-    font-size: clamp(10px, 5vw, 30px);
     background-color: white;
+    justify-content: center;
+}
+
+.countdownItem {
+    width: 60px;
+    padding: 5px;
+    font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.countdownLabel {
+    text-align: center;
+    width: 60px;
+    padding: 5px;
+    font-size: 1.5rem;
 }

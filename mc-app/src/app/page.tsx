@@ -8,9 +8,13 @@ import StatCard from "./_components/StatCard"
 export default function Home() {
   return (
     <div>
-      <div style={{display: "flex"}}>
-        <StatCard name="Person 1"></StatCard>
-        <StatCard name="Person 2"></StatCard>
+      <div id={styles.statsGrid}>
+        <div className={styles.statsItem}>
+          <StatCard name="Person 1"></StatCard>
+        </div>
+        <div className={styles.statsItem}>
+          <StatCard name="Person 2"></StatCard>
+        </div>
       </div>
       <Countdown></Countdown>
     </div>

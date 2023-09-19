@@ -1,5 +1,6 @@
 :root {
-  background-color: hsl(260, 46%, 20%);
+  background-color: #2b1c4a;
+  background: linear-gradient(270deg, rgba(52,35,87,1) 0%, rgba(43,28,74,1) 50%, rgba(52,35,87,1) 100%);
 }
 
 /*:root {

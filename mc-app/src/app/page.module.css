@@ -39,11 +39,29 @@
   font-family: var(--font-mono);
 }
 
-.grid {
+/*.grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
+}*/
+
+#statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(15%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+  margin: auto;
+  justify-content: center;
+  gap: 8%;
+}
+
+@media (max-width: 600px) {
+  #statsGrid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 2%;
+    margin-bottom: 20%;
+  }
 }
 
 .card {

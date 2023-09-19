@@ -33,10 +33,32 @@ const Countdown = () => {
     }, []);
 
     return (
-        <div id = "countdown">
-            <p>
-                {days} : {hours} : {minutes} : {seconds}
-            </p>
+        <div id="countdown">
+            <div className="countdownItem">
+                {days}
+            </div>
+            <div className="countdownItem">
+                {hours}
+            </div>
+            <div className="countdownItem">
+                {minutes}
+            </div>
+            <div className="countdownItem">
+                {seconds}
+            </div>
+            <div className="countdownLabel">
+                Days
+            </div>
+            <div className="countdownLabel">
+                Hours
+            </div>
+            <div className="countdownLabel">
+                Mins
+            </div>
+            <div className="countdownLabel">
+                Secs
+            </div>
+
         </div>
     )
 }
