@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import "./Countdown.css"
 
 function getNextEveryOtherSunday() {
-    const currentDate = new Date();
+    let currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
     const daysUntilNextSunday = 7 - currentDate.getDay(); // Calculate days until the next Sunday
     const daysToAdd = daysUntilNextSunday + 14; // Add 14 days to get to the next every other Sunday
     const nextEveryOtherSunday = new Date(currentDate.getTime() + (daysToAdd * 24 * 60 * 60 * 1000));
@@ -18,8 +19,9 @@ const Countdown = () => {
     const deadline = getNextEveryOtherSunday();
 
     const getTime = (deadline: Date) => {
-        const time = deadline.getTime() - Date.now()
-
+        const time = deadline.getTime() - Date.now();
+        console.log("Deadline: " + deadline.getTime())
+        console.log("Now: " + Date.now())
         setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
         setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
         setMinutes(Math.floor((time / 1000 / 60) % 60));

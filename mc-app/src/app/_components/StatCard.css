@@ -1,5 +1,5 @@
-#statCard {
-    width: 300px;
+.statCard {
+    max-width: 300px;
     height: 200px;
     margin: auto;
     margin-bottom: 5%;
@@ -11,6 +11,7 @@
     background-color: #291d42;
     border: 2px solid #8c92ac;
     font-size: 1.2rem;
+    filter: drop-shadow(0 0 0.2rem black);
 }
 
 /*cool green is #a1cca5 to go with this purple theme*/

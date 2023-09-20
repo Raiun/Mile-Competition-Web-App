@@ -1,0 +1,19 @@
+.voteButton {
+    max-width: 200px;
+    max-height: 100px;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid #8c92ac;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.voteButton:hover {
+    background-color: #A1CCA5;
+    transition: background-color 0.5s ease;
+    transform: scale(1.05);
+}
+
+.voteButton:active {
+    background-color: #69b170;
+}

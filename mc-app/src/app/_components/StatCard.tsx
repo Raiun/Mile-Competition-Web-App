@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "./StatCard.css"
+import VoteButton from "./VoteButton";
 
 type StatCardProps = {
   name: string;
@@ -60,11 +61,12 @@ const StatCard = ({name}: StatCardProps) => {
     }, [cardName]);
 
     return(
-        <div id = "statCard">
+        <div className="statCard">
             <p>Name: {stats.name}</p>
             <p>Best Mile Time: {stats.bestTime}</p>
             <p>Average Mile Time: {stats.averageTime}</p>
             <p>Last Week Mile Time: {stats.lastWeekTime}</p>
+            <VoteButton></VoteButton>
         </div>
     )
 }

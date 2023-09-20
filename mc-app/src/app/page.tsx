@@ -12,6 +12,9 @@ export default function Home() {
         <div className={styles.statsItem}>
           <StatCard name="Person 1"></StatCard>
         </div>
+        <div id={styles.versusIcon}>
+          VS
+        </div>
         <div className={styles.statsItem}>
           <StatCard name="Person 2"></StatCard>
         </div>

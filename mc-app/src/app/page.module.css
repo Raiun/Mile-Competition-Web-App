@@ -48,12 +48,13 @@
 
 #statsGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(15%, auto));
-  max-width: 100%;
+  grid-template-columns: repeat(3, minmax(100px, auto));
+  max-width: 90%;
   width: var(--max-width);
   margin: auto;
   justify-content: center;
-  gap: 8%;
+  column-gap: 2%;
+  row-gap: 8%;
 }
 
 @media (max-width: 600px) {
@@ -62,6 +63,18 @@
     gap: 2%;
     margin-bottom: 20%;
   }
+}
+
+#versusIcon {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 10px;
+  text-align: center;
+  color: #A1CCA5;
+  margin: auto;
+  font-size: 6rem;
+  font-weight: bold;
+  text-shadow: 5px 5px #291d42; /*#558ABB looks kind of cool*/
 }
 
 .card {
