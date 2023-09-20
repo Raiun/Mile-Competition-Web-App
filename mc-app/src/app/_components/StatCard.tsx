@@ -19,6 +19,7 @@ class Person {
 interface PersonStats {
     name: string,
     bestTime: string,
+    averageTime: string,
     lastWeekTime: string
 }
 
@@ -26,18 +27,21 @@ interface PersonStats {
 const defaultPerson: PersonStats = {
     name: "",
     bestTime: "",
+    averageTime: "",
     lastWeekTime: ""
 }
 
 const person1: PersonStats = {
     name: "Person 1",
     bestTime: "5:20",
+    averageTime: "6:20",
     lastWeekTime: "7:00"
 }
 
 const person2: PersonStats = {
     name: "Person 2",
     bestTime: "5:19",
+    averageTime: "6:20",
     lastWeekTime: "7:00"
 }
 
@@ -59,6 +63,7 @@ const StatCard = ({name}: StatCardProps) => {
         <div id = "statCard">
             <p>Name: {stats.name}</p>
             <p>Best Mile Time: {stats.bestTime}</p>
+            <p>Average Mile Time: {stats.averageTime}</p>
             <p>Last Week Mile Time: {stats.lastWeekTime}</p>
         </div>
     )

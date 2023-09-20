@@ -7,6 +7,10 @@
     padding: 150px 60px;
     /*padding: clamp(100px, 15%, 400px) clamp(50px, 10%, 400px);*/
     text-align: center;
-    background-color: white;
+    color: white;
+    background-color: #291d42;
+    border: 2px solid #8c92ac;
     font-size: 1.2rem;
 }
+
+/*cool green is #a1cca5 to go with this purple theme*/

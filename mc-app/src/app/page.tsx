@@ -7,7 +7,7 @@ import StatCard from "./_components/StatCard"
 
 export default function Home() {
   return (
-    <div>
+    <div style={{marginTop:"5%",}}>
       <div id={styles.statsGrid}>
         <div className={styles.statsItem}>
           <StatCard name="Person 1"></StatCard>
