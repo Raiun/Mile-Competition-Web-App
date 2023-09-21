@@ -20,8 +20,6 @@ const Countdown = () => {
 
     const getTime = (deadline: Date) => {
         const time = deadline.getTime() - Date.now();
-        console.log("Deadline: " + deadline.getTime())
-        console.log("Now: " + Date.now())
         setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
         setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
         setMinutes(Math.floor((time / 1000 / 60) % 60));
@@ -60,7 +58,6 @@ const Countdown = () => {
             <div className="countdownLabel">
                 Secs
             </div>
-
         </div>
     )
 }

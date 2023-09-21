@@ -19,6 +19,7 @@ export default function Home() {
           <StatCard name="Person 2"></StatCard>
         </div>
       </div>
+      <p id={styles.countdownLabel}>Next Mile In: </p>
       <Countdown></Countdown>
     </div>
   )

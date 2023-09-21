@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import "./StatCard.css"
 import VoteButton from "./VoteButton";
@@ -49,7 +50,7 @@ const person2: PersonStats = {
 const StatCard = ({name}: StatCardProps) => {
     const cardName = name;
     const [stats, setStats] = useState<PersonStats>(defaultPerson);
-    console.log({cardName})
+    const [displayOption, setDisplayOption] = useState(1);
 
     useEffect(() => {
         if (cardName === "Person 1") {
@@ -60,13 +61,41 @@ const StatCard = ({name}: StatCardProps) => {
         }
     }, [cardName]);
 
+    const flipCard = () => {
+        if (displayOption == 0) {
+            setDisplayOption(1);
+        }
+        else {
+            setDisplayOption(0);
+        }
+    }
+
     return(
         <div className="statCard">
-            <p>Name: {stats.name}</p>
-            <p>Best Mile Time: {stats.bestTime}</p>
-            <p>Average Mile Time: {stats.averageTime}</p>
-            <p>Last Week Mile Time: {stats.lastWeekTime}</p>
-            <VoteButton></VoteButton>
+            {displayOption === 0 ? (
+                <div onClick={flipCard}>
+                    <p>PULL FROM DB TO CREATE GRAPH</p>
+                </div>
+            ) : (
+                <div>
+                    <div onClick={flipCard}>
+                        <Image
+                            className="profilePic"
+                            src="/TempProf.png"
+                            alt="Profile Pic"
+                            width={110}
+                            height={110}
+                        />
+                        <p>Name: {stats.name}</p>
+                        <p>Best Mile Time: {stats.bestTime}</p>
+                        <p>Average Mile Time: {stats.averageTime}</p>
+                        <p>Last Week Mile Time: {stats.lastWeekTime}</p>
+                    </div>
+                    <div className="buttonContainer">
+                        <VoteButton></VoteButton>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 #countdown {
     display: grid;
-    column-gap: 20px;
+    column-gap: 30px;
     row-gap: 10px;
     grid-template-columns: repeat(4, minmax(60px, auto));
     margin: auto;
@@ -11,17 +11,36 @@
     border: 2px solid #8c92ac;
     background-color: #291d42;
     justify-content: center;
+    align-content: center;
     filter: drop-shadow(0 0 0.2rem black);
+}
+
+@media (max-width: 1050px) {
+    #countdown {
+        margin-bottom: 5%;
+    }
 }
 
 .countdownItem {
     width: 60px;
-    padding: 5px;
-    font-size: 2.5rem;
+    padding: 8px;
+    font-size: 3rem;
     border: 2px solid #8c92ac;
     border-radius: 10px;
     text-align: center;
     background-color: white;
+}
+
+@media (max-width: 600px) {
+    #countdown {
+        column-gap: 20px;
+        row-gap: 5px;
+    }
+
+    .countdownItem {
+      font-size: 2.5rem;
+      padding: 5px;
+    }
 }
 
 .countdownLabel {

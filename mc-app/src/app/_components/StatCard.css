@@ -1,10 +1,11 @@
 .statCard {
     max-width: 300px;
-    height: 200px;
+    width: 250px;
+    max-height: 380px;
+    height: 360px;
     margin: auto;
-    margin-bottom: 5%;
     border-radius: 10px;
-    padding: 150px 60px;
+    padding: 70px 60px;
     /*padding: clamp(100px, 15%, 400px) clamp(50px, 10%, 400px);*/
     text-align: center;
     color: white;
@@ -12,6 +13,19 @@
     border: 2px solid #8c92ac;
     font-size: 1.2rem;
     filter: drop-shadow(0 0 0.2rem black);
+}
+
+.buttonContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.profilePic {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #8c92ac;
+    border-radius: 50%;
 }
 
 /*cool green is #a1cca5 to go with this purple theme*/
