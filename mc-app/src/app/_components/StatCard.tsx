@@ -51,6 +51,7 @@ const StatCard = ({name}: StatCardProps) => {
     const cardName = name;
     const [stats, setStats] = useState<PersonStats>(defaultPerson);
     const [displayOption, setDisplayOption] = useState(1);
+    const [votes, setVotes] = useState(0);
 
     useEffect(() => {
         if (cardName === "Person 1") {
@@ -69,6 +70,10 @@ const StatCard = ({name}: StatCardProps) => {
             setDisplayOption(0);
         }
     }
+
+    const handleVoteClick = () => {
+        setVotes(votes + 1); // Toggle the state on click
+    };
 
     return(
         <div className="statCard">
@@ -91,8 +96,11 @@ const StatCard = ({name}: StatCardProps) => {
                         <p>Average Mile Time: {stats.averageTime}</p>
                         <p>Last Week Mile Time: {stats.lastWeekTime}</p>
                     </div>
-                    <div className="buttonContainer">
+                    <div onClick={handleVoteClick} className="buttonContainer">
                         <VoteButton></VoteButton>
+                    </div>
+                    <div>
+                        <p>Votes: {votes}</p>
                     </div>
                 </div>
             )}
