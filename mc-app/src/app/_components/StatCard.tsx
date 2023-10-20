@@ -47,6 +47,19 @@ const person2: PersonStats = {
     lastWeekTime: "7:00"
 }
 
+async function getData() {
+    const res = await fetch("")
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+   
+    if (!res.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data')
+    }
+   
+    return res.json()
+}
+
 const StatCard = ({name}: StatCardProps) => {
     const cardName = name;
     const [stats, setStats] = useState<PersonStats>(defaultPerson);
