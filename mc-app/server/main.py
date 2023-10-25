@@ -5,7 +5,11 @@ from bson.json_util import dumps
 app = FastAPI()
 
 @app.get("/")
-def read_root():
+def root():
+    return {"cool": "guy"}
+
+@app.get("/all")
+def get_all():
     data = collection.find({})
     return dumps(list(data))
 
